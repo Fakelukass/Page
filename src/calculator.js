@@ -27,7 +27,8 @@ function calculate1exercise() {
         result.innerHTML = Math.sqrt(a * a + b * b).toFixed(2)
     }
 }
-
+// zmaz tuto funkciu - nahradzuje tu, ktora je vyssie 
+// obsah funkcie prekopiruj do funkcie vyssie
 window.onload = function () {
     document.querySelector('h4#priklad-3-a-error-message').innerHTML = ''
     document.querySelector('h4#priklad-3-b-error-message').innerHTML = ''
@@ -61,6 +62,8 @@ function calculate3exercise() {
             a = Aside.value,
             b = Bside.value;
             c = Cside.value;
+
+        // ak sa ti tu nevypisuje cislo, tak sa pozri, co robi funkcia parseFloat a toFixed(2)
         result.innerHTML = Number(a + b + c) 
     }
 }
