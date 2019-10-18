@@ -61,6 +61,6 @@ function calculate3exercise() {
             a = Aside.value,
             b = Bside.value;
             c = Cside.value;
-        result.innerHTML = Math.sqrt(a + b + c)
+        result.innerHTML = Number(a + b + c) 
     }
 }
