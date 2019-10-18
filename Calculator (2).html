@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="text-center bg-dark" style="">
+<body class="text-center bg-dark">
   <div class="py-5">
     <div class="container">
       <div class="row">
@@ -125,14 +125,20 @@
           <h4 class="text-left">This Calculator calculates the circuit of a triangle. Here you can enter all four sides
             of your triangle and it will calculate the circuit of your triangle for you</h4>
 
+          
+            <div class="exercise-container">
           Side a: <input type="text" id="priklad-3-a" name="side_a"><br>
-          <h4 class="text-danger">This field has to be filled</h4>
+          <h4 id="priklad-3-a-error-message"class="text-danger">This field has to be filled</h4>
           Side b: <input type="text" id="priklad-3-b" name="side_b"><br>
-          <h4 class="text-danger">This field has to be filled</h4>
+          <h4 id="priklad-3-b-error-message"class="text-danger">This field has to be filled</h4>
           Side c:<input type="text" id="priklad-3-c" name="side_a">
-          <h4 class="text-danger">This field has to be filled</h4>
-          <input type="submit" value="Submit">
-
+          <h4 id="priklad-3-c-error-message"class="text-danger">This field has to be filled</h4>
+          <button type="submit" onclick="calculate3exercise()">Calculate</button>
+          <p>
+            <strong>
+              circuit=
+            </strong>
+          </p>
         </div>
       </div>
       <div class="row">
