@@ -4,8 +4,7 @@ window.onload = function () {
     document.querySelector('h4#priklad-3-a-error-message').innerHTML = ''
     document.querySelector('h4#priklad-3-b-error-message').innerHTML = ''
     document.querySelector('h4#priklad-3-c-error-message').innerHTML = ''
-    document.querySelector('h4#priklad-4-a-error-message').innerHTML = ''
-    document.querySelector('h4#priklad-4-b-error-message').innerHTML = ''
+
 }
 
 
