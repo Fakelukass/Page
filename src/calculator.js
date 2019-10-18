@@ -67,3 +67,30 @@ function calculate3exercise() {
         result.innerHTML = (a + b + c) 
     }
 }
+
+function calculate4exercise() {
+    let
+        Aside = document.querySelector('input#priklad-4-a'),
+        Bside = document.querySelector('input#priklad-4-b'),    
+        AsideError = document.querySelector('h4#priklad-4-a-error-message'),
+        BsideError = document.querySelector('h4#priklad-4-b-error-message'),
+        result = document.querySelector('span#priklad-4-result');
+
+    if (Aside.value == '' || Bside.value == '' ) {
+
+        if (Aside.value == '') AsideError.innerHTML = "This field has to be filled"
+        else AsideError.innerHTML = ""
+
+        if (Bside.value == '') BsideError.innerHTML = "This field has to be filled"
+        else BsideError.innerHTML = ""
+
+
+    } else {
+        let
+            a = parseFloat(Aside.value),
+            b = parseFloat(Bside.value);
+            
+        
+        result.innerHTML = [(a + b) * 2] 
+    }
+}
