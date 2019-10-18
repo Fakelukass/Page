@@ -11,15 +11,21 @@
   <meta name="keywords" content="Pingendo bootstrap example template wireframe cover">
   <meta name="author" content="Pingendo">
   <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
   <link rel="stylesheet" href="wireframe.css">
+  <!-- script dependencies -->
+  <script type="text/javascript" src="./src/calculator.js"></script>
+
 </head>
 
 <body class="text-center bg-dark" style="">
   <div class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-12"><a class="btn btn-light margin=20px" href="index.html">Home</a><a class="btn btn-light" href="school.html">School</a><a class="btn btn-light" href="projects.html">Projects</a><a class="btn btn-light" href="Calculator (2).html">Calculator</a>
+        <div class="col-md-12"><a class="btn btn-light margin=20px" href="index.html">Home</a><a class="btn btn-light"
+            href="school.html">School</a><a class="btn btn-light" href="projects.html">Projects</a><a
+            class="btn btn-light" href="Calculator (2).html">Calculator</a>
           <h1 class="display-3">Calculator</h1>
         </div>
       </div>
@@ -34,18 +40,35 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-left">In mathematics, the Pythagorean theorem is a fundamental relation in Euclidean geometry among the three sides of a right triangle. It states that the area of the square whose side is the hypotenuse (the side opposite the right angle) is equal to the sum of the areas of the squares on the other two sides. This theorem can be written as an equation relating the lengths of the sides a, b and c, often called the "Pythagorean equation"<br></h4>
+          <h4 class="text-left">In mathematics, the Pythagorean theorem is a fundamental relation in Euclidean geometry
+            among the three sides of a right triangle. It states that the area of the square whose side is the
+            hypotenuse (the side opposite the right angle) is equal to the sum of the areas of the squares on the other
+            two sides. This theorem can be written as an equation relating the lengths of the sides a, b and c, often
+            called the "Pythagorean equation"<br></h4>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block" src="assets/img/FN47VG4GVZPOZOZ.LARGE.gif"></div>
+        <div class="col-md-12">
+          <img class="img-fluid d-block" src="assets/img/FN47VG4GVZPOZOZ.LARGE.gif" style="margin: 20px 0px">
+        </div>
+        <div class="exercise-container">
+            <div>
+              Side a: <input type="number" id="priklad-1-a" name="side_a"><br>
+              <h4 id="priklad-1-a-error-message" class="text-left text-danger">This field has to be filled<br></h4>
+          </div>
+            <div>
+              Side b: <input type="number" id="priklad-1-b" name="side_b"><br>
+              <h4 id="priklad-1-b-error-message" class="text-left text-danger">This field has to be filled</h4>
+            </div>
+            <button type="submit" onclick="calculate1exercise()">Calculate</button>
+            <p>
+              <strong>
+                Side c = 
+              </strong>
+              <span id="priklad-1-result"></span>
+            </p>
+        </div>
         
-           Side a: <input type="text" id="priklad-1-a" name="side_a"><br>
-           <h4 class="text-left text-danger">This field has to be filled<br></h4>
-           Side b: <input type="text" id="priklad-1-b" name="side_b"><br>
-          <h4 class="text-left text-danger">This field has to be filled</h4>
-          <input type="submit" value="Submit">
-   
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -58,8 +81,10 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-4 text-left">Conversion of Content Units</h1>
-          <h4 class="text-left">This calculator will calculate from one content unit to another for you all you have to do is choose a unit from input unit and an output unit. Then type a number like 100km^2 and it will calculate it into the chosen unit for you.</h4>
-         <input type="text" id="priklad-2-a" name="priklad-2-a"><select>
+          <h4 class="text-left">This calculator will calculate from one content unit to another for you all you have to
+            do is choose a unit from input unit and an output unit. Then type a number like 100km^2 and it will
+            calculate it into the chosen unit for you.</h4>
+          <input type="text" id="priklad-2-a" name="priklad-2-a"><select>
             <option value="km^2">km^2</option>
             <option value="ha">ha</option>
             <option value="a">a</option>
@@ -67,9 +92,9 @@
             <option value="dm^2">dm^2</option>
             <option value="cm^2">cm^2</option>
             <option value="mm^2">mm^2</option>
-            </select><br> 
+          </select><br>
 
-            <h4 class="text-danger">This field has to be filled</h4>
+          <h4 class="text-danger">This field has to be filled</h4>
 
           <input type="text" id="priklad-2-b" name="side_b">
           <select>
@@ -80,9 +105,10 @@
             <option value="dm^2">dm^2</option>
             <option value="cm^2">cm^2</option>
             <option value="mm^2">mm^2</option>
-          </select><h4 class="text-danger">This field has to be filled</h4><br>
-            <input type="submit" value="Submit">
-         
+          </select>
+          <h4 class="text-danger">This field has to be filled</h4><br>
+          <input type="submit" value="Submit">
+
         </div>
       </div>
     </div>
@@ -96,16 +122,17 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-left">This Calculator calculates the circuit of a triangle. Here you can enter all four sides of your triangle and it will calculate the circuit of your triangle for you</h4>
-          
-             Side a: <input type="text" id="priklad-3-a" name="side_a"><br>
-             <h4 class="text-danger">This field has to be filled</h4>
-             Side b: <input type="text" id="priklad-3-b" name="side_b"><br>
-             <h4 class="text-danger">This field has to be filled</h4>
-             Side c:<input type="text" id="priklad-3-c" name="side_a">
-             <h4 class="text-danger">This field has to be filled</h4>
-            <input type="submit" value="Submit">
-         
+          <h4 class="text-left">This Calculator calculates the circuit of a triangle. Here you can enter all four sides
+            of your triangle and it will calculate the circuit of your triangle for you</h4>
+
+          Side a: <input type="text" id="priklad-3-a" name="side_a"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Side b: <input type="text" id="priklad-3-b" name="side_b"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Side c:<input type="text" id="priklad-3-c" name="side_a">
+          <h4 class="text-danger">This field has to be filled</h4>
+          <input type="submit" value="Submit">
+
         </div>
       </div>
       <div class="row">
@@ -124,14 +151,15 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-left">This Calculator calculates the Volume of a right-anled triangle. Here you can enter all four sides of your triangle and it will calculate the Volume of your triangle for you</h4>
-          
-             Side a: <input type="text" id="priklad-4-a" name="side_a"><br>
-            <h4 class= "text-danger">This field has to be filled</h4>
-             Side b: <input type="text" id="priklad-4-b" name="side_b"><br>
-             <h4 class= "text-danger">This field has to be filled</h4>
-            <input type="submit" value="Submit">
-          
+          <h4 class="text-left">This Calculator calculates the Volume of a right-anled triangle. Here you can enter all
+            four sides of your triangle and it will calculate the Volume of your triangle for you</h4>
+
+          Side a: <input type="text" id="priklad-4-a" name="side_a"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Side b: <input type="text" id="priklad-4-b" name="side_b"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          <input type="submit" value="Submit">
+
         </div>
       </div>
     </div>
@@ -145,20 +173,22 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-left">Here you can calculate the percantage of something<br><br>Option 1. what is__% of __<br>Option2. __is what percent of__?<br>Option3. What is the percentage increase/decrease from __to__<br></h4>
-        
-           
-            Percent: <input type="text" id="priklad-5-a" name="side_a"><br>
-            <h4 class="text-danger">This field has to be filled</h4>
-             Percent: <input type="text" id="priklad-5-b" name="side_b"><br>
-             <select>
-              <option value="option1">option1</option>
-              <option value="option2">option2</option>
-              <option value="Option3">option3</option>
-              </select> 
-             <h4 class="text-danger">This field has to be filled</h4>
-            <input type="submit" value="Submit">
-         
+          <h4 class="text-left">Here you can calculate the percantage of something<br><br>Option 1. what is__% of
+            __<br>Option2. __is what percent of__?<br>Option3. What is the percentage increase/decrease from __to__<br>
+          </h4>
+
+
+          Percent: <input type="text" id="priklad-5-a" name="side_a"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Percent: <input type="text" id="priklad-5-b" name="side_b"><br>
+          <select>
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="Option3">option3</option>
+          </select>
+          <h4 class="text-danger">This field has to be filled</h4>
+          <input type="submit" value="Submit">
+
         </div>
       </div>
     </div>
@@ -168,14 +198,15 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-4 text-left">Basic Algebra</h1>
-          <h4 class="text-left">Here you can just enter a basic algebra calculation like X+Y=Z and it will calculate the X for you</h4>
-          
-             Y: <input type="text" id="priklad-6-a" name="side_a"><br>
-            <h4 class="text-danger">This field has to be filled</h4>
-             Z: <input type="text" id="priklad-6-b" name="side_b"><br>
-             <h4 class="text-danger">This field has to be filled</h4>
-            <input type="submit" value="Submit">
-       
+          <h4 class="text-left">Here you can just enter a basic algebra calculation like X+Y=Z and it will calculate the
+            X for you</h4>
+
+          Y: <input type="text" id="priklad-6-a" name="side_a"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Z: <input type="text" id="priklad-6-b" name="side_b"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          <input type="submit" value="Submit">
+
         </div>
       </div>
     </div>
@@ -185,36 +216,47 @@
       <div class="row">
         <div class="col-md-12">
           <h1 class="display-4 text-left">Speed Calculations</h1>
-          <h4 class="text-left">This calculator can calculate speed, time or distance. For example you have a speed and a distance and want to know how long it will take to get there. All you have to do is enter the information and the calculator calculates it for you.
+          <h4 class="text-left">This calculator can calculate speed, time or distance. For example you have a speed and
+            a distance and want to know how long it will take to get there. All you have to do is enter the information
+            and the calculator calculates it for you.
             <br>
             Option1. Distance= speed*time<br>
             Option2. Speed= distance/time<br>
             Option3. Time= distance/speed<br>
-            
-            
-          
+
+
+
           </h4>
 
           <a class="btn btn-light margin=20px" href="school.html">Option1</a>
           <a class="btn btn-light margin=20px" href="school.html">Option2</a>
           <a class="btn btn-light margin=20px" href="school.html">Option3</a>
           <br>
-            Speed: <input type="text" id="priklad-7-a" name="side_a"><br>
-            <h4 class="text-danger">This field has to be filled</h4> 
-            Time: <input type="text" id="priklad-7-b" name="side_b"><br>
-            
-            <h4 class="text-danger">This field has to be filled</h4>
-            <input type="submit" value="Submit">
-         
+          Speed: <input type="text" id="priklad-7-a" name="side_a"><br>
+          <h4 class="text-danger">This field has to be filled</h4>
+          Time: <input type="text" id="priklad-7-b" name="side_b"><br>
+
+          <h4 class="text-danger">This field has to be filled</h4>
+          <input type="submit" value="Submit">
+
           <h4 class=""><br></h4>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')"
+    style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">
+    Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block"
+      alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
